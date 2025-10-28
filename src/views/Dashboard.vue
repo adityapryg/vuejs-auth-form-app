@@ -1,8 +1,8 @@
 <template>
-  <div class="dashboard">
+  <div class="dashboard" v-if="!isLoggingOut && isAuthenticated && currentUser">
     <div class="welcome-card">
       <h1>Welcome to the Secure Area!</h1>
-      <p>Hello, <strong>{{ $store.state.user.username }}</strong>! You have successfully logged in.</p>
+      <p>Hello, <strong>{{ currentUser.username }}</strong>! You have successfully logged in.</p>
       <div class="dashboard-actions">
         <router-link to="/form" class="action-btn primary">
           📝 Fill Complete Form
@@ -33,10 +33,28 @@
 <script>
 export default {
   name: 'Dashboard',
+  data() {
+    return {
+      isLoggingOut: false
+    };
+  },
+  computed: {
+    isAuthenticated() {
+      return this.$store.getters.isAuthenticated;
+    },
+    currentUser() {
+      return this.$store.getters.currentUser;
+    }
+  },
   methods: {
     logout() {
+      this.isLoggingOut = true;
+      // Clear auth state
       this.$store.dispatch('logout');
-      this.$router.push('/login');
+      // Small delay to ensure store state is updated before navigation
+      setTimeout(() => {
+        this.$router.push('/login');
+      }, 10);
     }
   }
 }

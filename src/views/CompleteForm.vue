@@ -3,6 +3,14 @@
     <div class="form-card">
       <h1 class="form-title">Complete Web Form</h1>
       
+      <div v-if="submissionResult" class="submission-result">
+        <h3>Form Submitted Successfully!</h3>
+        <div class="result-data">
+          <h4>Submitted Data:</h4>
+          <pre>{{ JSON.stringify(submissionResult, null, 2) }}</pre>
+        </div>
+      </div>
+
       <form @submit.prevent="handleSubmit" class="web-form">
         <div class="form-row">
           <div class="form-group half">
@@ -140,14 +148,6 @@
           </button>
         </div>
       </form>
-      
-      <div v-if="submissionResult" class="submission-result">
-        <h3>Form Submitted Successfully!</h3>
-        <div class="result-data">
-          <h4>Submitted Data:</h4>
-          <pre>{{ JSON.stringify(submissionResult, null, 2) }}</pre>
-        </div>
-      </div>
     </div>
   </div>
 </template>

@@ -22,7 +22,10 @@ export default {
   methods: {
     logout() {
       this.$store.dispatch('logout');
-      this.$router.push('/login');
+      // Small delay to ensure store state is updated before navigation
+      setTimeout(() => {
+        this.$router.push('/login');
+      }, 10);
     }
   }
 }

@@ -41,10 +41,6 @@
           {{ isLoading ? 'Logging in...' : 'Login' }}
         </button>
       </form>
-      
-      <div class="powered-by">
-        <p>Powered by <strong>Vue.js & Elemental Selenium</strong></p>
-      </div>
     </div>
   </div>
 </template>
