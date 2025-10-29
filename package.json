@@ -8,7 +8,8 @@
     "lint": "vue-cli-service lint",
     "test:e2e": "playwright test",
     "test:e2e:coverage": "playwright test auth-flow-coverage",
-    "test:e2e:report": "playwright show-report tests/playwright-report"
+    "test:e2e:report": "playwright show-report tests/playwright-report",
+    "test:selenium": "mocha tests/selenium/*.test.js"
   },
   "dependencies": {
     "@vue/cli-service": "^5.0.0",
@@ -22,8 +23,12 @@
     "@vitest/coverage-v8": "^4.0.4",
     "@vue/cli-plugin-router": "^5.0.0",
     "@vue/cli-plugin-vuex": "^5.0.0",
+    "chai": "^6.2.0",
+    "chromedriver": "^141.0.6",
     "eslint": "^8.0.0",
     "eslint-plugin-vue": "^9.0.0",
+    "mocha": "^11.7.4",
+    "selenium-webdriver": "^4.38.0",
     "vite-plugin-istanbul": "^7.2.0"
   }
 }
