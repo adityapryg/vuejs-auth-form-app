@@ -1,1 +1,10 @@
 node_modules
+dist
+.DS_Store
+
+# Test coverage
+tests/coverage/
+
+# Playwright
+test-results/
+tests/playwright-report/

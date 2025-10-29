@@ -5,7 +5,10 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "test:e2e": "playwright test",
+    "test:e2e:coverage": "playwright test auth-flow-coverage",
+    "test:e2e:report": "playwright show-report tests/playwright-report"
   },
   "dependencies": {
     "@vue/cli-service": "^5.0.0",
@@ -15,9 +18,12 @@
     "vuex": "^4.1.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@vitest/coverage-v8": "^4.0.4",
     "@vue/cli-plugin-router": "^5.0.0",
     "@vue/cli-plugin-vuex": "^5.0.0",
     "eslint": "^8.0.0",
-    "eslint-plugin-vue": "^9.0.0"
+    "eslint-plugin-vue": "^9.0.0",
+    "vite-plugin-istanbul": "^7.2.0"
   }
 }

@@ -6,7 +6,7 @@ A Vue.js application featuring authentication system and comprehensive form hand
 
 ### 🔐 Authentication System
 - Login page modeled after [the-internet.herokuapp.com/login](https://the-internet.herokuapp.com/login)
-- Credentials: `tomsmith` / `SuperSecretPassword!`
+- Credentials: `admin` / `SuperSecretPassword!`
 - Protected routes with Vue Router guards
 - Persistent authentication state with Vuex
 - Automatic token management with localStorage
@@ -68,7 +68,7 @@ src/
 
 1. **Login**
    - Navigate to the login page
-   - Use credentials: `tomsmith` / `SuperSecretPassword!`
+   - Use credentials: `admin` / `SuperSecretPassword!`
    - Access protected areas after authentication
 
 2. **Complete Form**
