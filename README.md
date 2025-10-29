@@ -5,20 +5,21 @@ A Vue.js application featuring authentication system and comprehensive form hand
 ## Features
 
 ### 🔐 Authentication System
-- Login page modeled after [the-internet.herokuapp.com/login](https://the-internet.herokuapp.com/login)
-- Credentials: `tomsmith` / `SuperSecretPassword!`
+
+- Credentials: `admin` / `SuperSecretPassword!`
 - Protected routes with Vue Router guards
 - Persistent authentication state with Vuex
 - Automatic token management with localStorage
 
 ### 📋 Complete Web Form
-- Comprehensive form based on [formy-project.herokuapp.com/form](https://formy-project.herokuapp.com/form)
+
 - Form validation and submission handling
 - Multiple input types: text, radio buttons, select dropdown, date picker
 - Form reset functionality
 - Submission result display with formatted JSON
 
 ### 🎨 Modern UI/UX
+
 - Responsive design for all screen sizes
 - Clean and intuitive interface
 - Visual feedback for user interactions
@@ -44,17 +45,20 @@ src/
 ## Installation & Setup
 
 1. **Clone Repository**
+
    ```bash
    git clone https://github.com/adityapryg/vuejs-auth-form-app.git
    cd vuejs-auth-form-app
    ```
 
 2. **Install Dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Development Server**
+
    ```bash
    npm run serve
    ```
@@ -67,8 +71,9 @@ src/
 ## Usage
 
 1. **Login**
+
    - Navigate to the login page
-   - Use credentials: `tomsmith` / `SuperSecretPassword!`
+   - Use credentials: `admin` / `SuperSecretPassword!`
    - Access protected areas after authentication
 
 2. **Complete Form**
@@ -108,8 +113,9 @@ src/
 ## Development Notes
 
 This project demonstrates:
+
 - Vue.js 3 Composition API patterns
-- Route protection and navigation guards  
+- Route protection and navigation guards
 - Form handling and validation
 - State management with Vuex
 - Local storage integration

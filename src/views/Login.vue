@@ -4,7 +4,7 @@
       <h1 class="login-title">Login Page</h1>
       <p class="login-subtitle">
         This is where you can log into the secure area. Enter
-        <strong>tomsmith</strong> for the username and
+        <strong>admin</strong> for the username and
         <strong>SuperSecretPassword!</strong> for the password.
       </p>
       
@@ -69,7 +69,7 @@ export default {
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       // Check credentials (matching the-internet.herokuapp.com format)
-      if (this.credentials.username === 'tomsmith' && 
+      if (this.credentials.username === 'admin' && 
           this.credentials.password === 'SuperSecretPassword!') {
         
         this.$store.dispatch('login', {
